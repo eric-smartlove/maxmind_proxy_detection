@@ -10,6 +10,30 @@ describe MaxmindProxyDetection do
     Excon.defaults[:mock] = true
   end
 
+  describe '#available?' do
+    before do
+      MaxmindProxyDetection.instance_variable_get(:@license_key).must_be_nil
+    end
+
+    it 'returns false if no license_key' do
+      MaxmindProxyDetection.available?.must_equal false
+    end
+
+    it 'returns false if blank license_key' do
+      MaxmindProxyDetection.license_key = ''
+      MaxmindProxyDetection.available?.must_equal false
+    end
+
+    it 'returns true if license_key' do
+      MaxmindProxyDetection.license_key = 'any_license_key'
+      MaxmindProxyDetection.available?.must_equal true
+    end
+
+    after do
+      MaxmindProxyDetection.license_key = nil
+    end
+  end
+
   describe '#score' do
 
     # Check that #score calls #request with right parameter
@@ -93,7 +117,6 @@ describe 'Maxmind service' do
     MaxmindProxyDetection.license_key = ENV['MAXMIND_PROXY_DETECTION_LICENSE_KEY_FOR_TESTS']
   end
 
-
   # Test that service use the expected format for error
   it 'returns an error with err key' do
     # Provoke an error by making the request without a license
@@ -105,14 +128,14 @@ describe 'Maxmind service' do
   end
 
   it 'returns a score with a proxyScore key' do
-    skip  if ENV['MAXMIND_PROXY_DETECTION_LICENSE_KEY_FOR_TESTS'].empty?
+    skip  unless MaxmindProxyDetection.available?
     response = MaxmindProxyDetection.send(:request, '127.0.0.1')
     response.status.must_equal 200
     response.body.must_equal 'proxyScore=0.00'
   end
 
   it 'returns a score with empty value if ip is invalid' do
-    skip  if ENV['MAXMIND_PROXY_DETECTION_LICENSE_KEY_FOR_TESTS'].empty?
+    skip  unless MaxmindProxyDetection.available?
     response = MaxmindProxyDetection.send(:request, 'invalid_ip')
     response.status.must_equal 200
     response.body.must_equal 'proxyScore='

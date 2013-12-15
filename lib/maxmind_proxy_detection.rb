@@ -6,6 +6,11 @@ module MaxmindProxyDetection
   class << self
     attr_writer :license_key
 
+    def available?
+      return true  if @license_key && !@license_key.empty?
+      return false
+    end
+
     # Query Maxmind Proxy Detection service with given ip and set license_key.
     # @return [Float, nil] Proxy score from 0.0 to 4.0. Nil if IP is invalid.
     def score(ip)
