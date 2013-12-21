@@ -1,1 +1,5 @@
+# Rubymine
 /.idea/
+
+# Generated gem
+/*.gem
