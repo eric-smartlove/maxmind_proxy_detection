@@ -1,6 +1,8 @@
 # MaxMind Proxy Detection
 
-Wrapper for MaxMind's Proxy Detection service
+Wrapper for MaxMind's Proxy Detection service (https://www.maxmind.com/en/proxy)
+
+For minFraud, see this other gem: http://rubygems.org/gems/maxmind-rb
 
 ## Installation
 
@@ -15,3 +17,4 @@ Not tested with ruby 2.x
     # Returns a float between 0.0 and 4.0
     proxy_score = MaxmindProxyDetection.score("127.0.0.1")
 
+Note that, apparently, when Maxmind service is queried about the same ip several times, only one call is spent.
