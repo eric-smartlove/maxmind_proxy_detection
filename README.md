@@ -2,7 +2,7 @@
 
 Wrapper for MaxMind's Proxy Detection service (https://www.maxmind.com/en/proxy)
 
-For minFraud, see this other gem: http://rubygems.org/gems/maxmind-rb
+For minFraud, see this other gem: https://rubygems.org/gems/maxmind
 
 ## Installation
 
