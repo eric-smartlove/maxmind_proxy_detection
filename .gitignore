@@ -3,3 +3,6 @@
 
 # Generated gem
 /*.gem
+
+# Test coverage results
+/coverage

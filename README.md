@@ -1,4 +1,8 @@
-# MaxMind Proxy Detection
+# MaxMind Proxy Detection (unofficial)
+
+[![Gem Version](https://badge.fury.io/rb/maxmind_proxy_detection.png)](http://badge.fury.io/rb/maxmind_proxy_detection)
+[![Test Coverage](https://codeclimate.com/github/eric-smartlove/maxmind_proxy_detection/coverage.png)](https://codeclimate.com/github/eric-smartlove/maxmind_proxy_detection)
+[![Code Climate](https://codeclimate.com/github/eric-smartlove/maxmind_proxy_detection.png)](https://codeclimate.com/github/eric-smartlove/maxmind_proxy_detection)
 
 Wrapper for MaxMind's Proxy Detection service (https://www.maxmind.com/en/proxy)
 
