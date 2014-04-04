@@ -10,9 +10,9 @@ For minFraud, see this other gem: https://rubygems.org/gems/maxmind
 
 ## Installation
 
-Requires ruby 1.9.x
+Requires ruby 1.9.x or more
 
-Not tested with ruby 2.x
+Version 0.0.0 tested with ruby 1.9.3 and ruby 2.0.0
 
 ## Usage
 
