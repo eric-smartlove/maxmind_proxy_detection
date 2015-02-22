@@ -1,3 +1,7 @@
+# rvm config
+/.ruby-version
+/.ruby-gemset
+
 # Rubymine
 /.idea/
 

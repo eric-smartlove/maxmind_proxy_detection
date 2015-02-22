@@ -12,7 +12,7 @@ For minFraud, see this other gem: https://rubygems.org/gems/maxmind
 
 Requires ruby 1.9.x or more
 
-Version 0.0.0 tested with ruby 1.9.3 and ruby 2.0.0
+Version 0.0.1 tested with ruby 1.9.3, ruby 2.0.0 and ruby 2.1.5
 
 ## Usage
 

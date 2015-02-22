@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'maxmind_proxy_detection'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
 
   s.summary     = "Wrapper for MaxMind's Proxy Detection service"
   s.description = "A wrapper for MaxMind's Proxy Detection service."
