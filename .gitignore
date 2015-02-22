@@ -1,6 +1,8 @@
+# Bundler
+Gemfile.lock
+
 # rvm config
-/.ruby-version
-/.ruby-gemset
+/.ruby-*
 
 # Rubymine
 /.idea/

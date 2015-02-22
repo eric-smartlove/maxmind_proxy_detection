@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files                    = Dir['lib/*.rb']
   s.requirements             = 'A MaxMind account with a subscription for Proxy Detection service'
   s.add_runtime_dependency     'excon'
-  # With minitest-reporters 1.0, I have the following error 'uninitialized constant Minitest::StatisticsReporter' on
-  # 'rake test'
-  s.add_development_dependency 'minitest-reporters', '<1.0'
+  s.add_development_dependency 'minitest-reporters'
+  # With minitest 5, each test raises "NoMethodError: undefined method `assertions'", don't know why.
+  s.add_development_dependency 'minitest', '~>4.0'
 end

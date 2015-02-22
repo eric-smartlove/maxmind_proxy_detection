@@ -5,6 +5,9 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
+# Load this gem (required to run "ruby -I test ...")
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+
 require 'maxmind_proxy_detection'
 
 describe MaxmindProxyDetection do
